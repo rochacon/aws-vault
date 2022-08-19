@@ -145,13 +145,17 @@ func ConfigureGlobals(app *kingpin.Application) *AwsVault {
 		Envar("AWS_VAULT_SECRET_SERVICE_COLLECTION_NAME").
 		StringVar(&a.KeyringConfig.LibSecretCollectionName)
 
+	app.Flag("pass-cmd", "Name of the pass executable").
+		Envar("AWS_VAULT_PASS_CMD").
+		StringVar(&a.KeyringConfig.PassCmd)
+
 	app.Flag("pass-dir", "Pass password store directory").
 		Envar("AWS_VAULT_PASS_PASSWORD_STORE_DIR").
 		StringVar(&a.KeyringConfig.PassDir)
 
-	app.Flag("pass-cmd", "Name of the pass executable").
-		Envar("AWS_VAULT_PASS_CMD").
-		StringVar(&a.KeyringConfig.PassCmd)
+	app.Flag("pass-filename-extension", "Filename extension to append to the item path stored in pass").
+		Envar("AWS_VAULT_PASS_FILENAME_EXTENSION").
+		StringVar(&a.KeyringConfig.PassFilenameExtension)
 
 	app.Flag("pass-prefix", "Prefix to prepend to the item path stored in pass").
 		Envar("AWS_VAULT_PASS_PREFIX").
