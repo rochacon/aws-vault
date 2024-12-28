@@ -2,7 +2,7 @@ module github.com/99designs/aws-vault/v7
 
 go 1.20
 
-replace github.com/99designs/keyring v1.2.2 => github.com/rochacon/keyring v0.0.0-20230904194148-8fc6a81d907e
+replace github.com/99designs/keyring v1.2.2 => github.com/rochacon/keyring v0.0.0-20230904232614-af622ad0cb47
 
 require (
 	github.com/99designs/keyring v1.2.2
